@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>NasdaqAnimation - jQuery text animation plugin</title>
+    <meta name="description" content="">
+    <meta name="author" content="Aleix Fabra">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="jquery.nasdaqanimation.js"></script>
+    <script type="text/javascript">
+      jQuery(function($) {
+        $('.nasdaq-animation').nasdaqAnimation();
+      });
+    </script>
+    <style type="text/css">
+      .nasdaq-animation {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+  <div>
+    <header></header>
+    <!-- Default configuration -->
+    <div class="nasdaq-animation">
+      <label>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</label>
+    </div>
+    <!-- Custom configuration -->
+    <div class="nasdaq-animation" data-duration="20" data-loop="2" data-effect="linear">
+      <label>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</label>
+    </div>
+    <footer></footer>
+    </div>
+  </body>
+</html>
