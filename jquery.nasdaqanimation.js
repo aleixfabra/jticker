@@ -102,7 +102,7 @@
   function newAttributes(el) {
     return {
       container : el,
-      el        : el.children('label').first(),
+      el        : el.children('span').first(),
       duration  : el.data('duration') || DEFAULTS.duration,
       loop      : el.data('loop')     || DEFAULTS.loop,
       effect    : el.data('effect')   || DEFAULTS.effect
