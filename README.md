@@ -18,8 +18,7 @@ Animation settings are:
   text animation duration (By default, 50 seconds)
 * **loop**  
   repeat text animation loop every X seconds (By default, 1second)
-* **effect**
-
+* **effect**  
   css text transition effect (By default, ease)
 
 Basic layout:
