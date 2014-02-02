@@ -13,7 +13,7 @@ For browser transition support see [http://www.w3schools.com/css/css3_transition
 ## Usage
 
 Animation settings are:  
-* **duration**  
+  * **duration**  
   text animation duration (By default, 50 seconds)
 * **loop**  
   repeat text animation loop every X seconds (By default, 1second)
