@@ -1,18 +1,18 @@
 (function ($) {
   "use strict";
 
-  var NasdaqAnimation = function (attr) {
+  var NasdaqAnimation = function (attributes) {
     var defaults = {
         offset: 3
       },
-      attributes = attr || {};
+      attr = attributes || {};
 
     /**
      * Set CSS3 Cross-browser transition to element instance
      * @param  {string} string - CSS3 transition string
      */
     function setAnimation(string) {
-      attributes.el.css({
+      attr.el.css({
         webkitTransition  : string,
         mozTransition     : string,
         msTransition      : string,
@@ -25,10 +25,10 @@
      * Add animation to element instance
      */
     function addAnimation() {
-      var string = 'left ' + attributes.duration + 's ' + attributes.effect;
+      var string = 'left ' + attr.duration + 's ' + attr.effect;
       setAnimation(string);
       //Set text animation pixels
-      attributes.el.css({left: attributes.width + 'px'});
+      attr.el.css({left: attr.width + 'px'});
     }
 
     /**
@@ -38,7 +38,7 @@
       var string = 'none';
       setAnimation(string);
       //Set text width to the beginning
-      attributes.el.css({left: 0});
+      attr.el.css({left: 0});
     }
 
     /**
@@ -48,34 +48,38 @@
       //Remove animation
       removeAnimation();
       //Animate
-      setTimeout(addAnimation, attributes.loop * 1000);
+      setTimeout(addAnimation, attr.loop * 1000);
     }
 
     /**
      * Detect when CSS3 transition ends
      */
     function eventsOn() {
-      attributes.el.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', animate);
+      attr.el.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', animate);
     }
 
     /**
      * Initialize function to setup the class
      */
     function initialize() {
+      var width;
+
       //Setup css
-      attributes.container.css({overflow: 'hidden'});
-      attributes.el.css({
+      attr.container.css({overflow: 'hidden'});
+      attr.el.css({
         whiteSpace: 'pre',
         position: 'relative'
       });
 
+      width = attr.el.width();
+
       //Check if text is bigger than it's container
-      if (attributes.el.width() > attributes.container.width()) {
+      if (width > attr.container.width()) {
 
         //Calculate text width
-        attributes.width = (-1 * (attributes.el.width() + defaults.offset));
+        attr.width = (-1 * (width + defaults.offset));
         //Duplicate text
-        attributes.el.append(' ' + attributes.el.html());
+        attr.el.append(' ' + attr.el.html());
         //Add events listeners
         eventsOn();
         //Trigger first animation
@@ -89,8 +93,8 @@
   };
 
   var DEFAULTS = {
-    duration : 40,
-    loop     : 10,
+    duration : 50,
+    loop     : 1,
     effect   : ''
   };
 
@@ -99,13 +103,13 @@
    * @param  {number} el - current jquery element
    * @return {object} NasdaqAnimation input object
    */
-  function newAttributes(el) {
+  function newattr(el) {
     return {
       container : el,
       el        : el.children('span').first(),
-      duration  : el.data('duration') || DEFAULTS.duration,
-      loop      : el.data('loop')     || DEFAULTS.loop,
-      effect    : el.data('effect')   || DEFAULTS.effect
+      duration  : el.data().duration || DEFAULTS.duration,
+      loop      : el.data().loop     || DEFAULTS.loop,
+      effect    : el.data().effect   || DEFAULTS.effect
     };
   }
 
@@ -116,7 +120,7 @@
   $.fn.nasdaqAnimation = function () {
     var animation;
     return this.each(function () {
-      animation = new NasdaqAnimation(newAttributes($(this)));
+      animation = new NasdaqAnimation(newattr($(this)));
       animation.initialize();
     });
   };
