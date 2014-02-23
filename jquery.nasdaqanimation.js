@@ -1,3 +1,7 @@
+/**
+ * @file jQuery lightweight text animation plugin
+ * @author Aleix Fabra
+ */
 (function ($) {
   "use strict";
 
@@ -62,19 +66,21 @@
      * Initialize function to setup the class
      */
     function initialize() {
-      var width;
+      var width,
+        containerWidth;
 
       //Setup css
       attr.container.css({overflow: 'hidden'});
       attr.el.css({
-        whiteSpace: 'pre',
+        whiteSpace: 'nowrap',
         position: 'relative'
       });
 
       width = attr.el.width();
+      containerWidth = attr.container.width();
 
-      //Check if text is bigger than it's container
-      if (width > attr.container.width()) {
+      //Check if text is bigger than it's container and start animation
+      if (width > containerWidth) {
 
         //Calculate text width
         attr.width = (-1 * (width + defaults.offset));
@@ -103,7 +109,7 @@
    * @param  {number} el - current jquery element
    * @return {object} NasdaqAnimation input object
    */
-  function newattr(el) {
+  function newAttr(el) {
     return {
       container : el,
       el        : el.children('span').first(),
@@ -120,7 +126,7 @@
   $.fn.nasdaqAnimation = function () {
     var animation;
     return this.each(function () {
-      animation = new NasdaqAnimation(newattr($(this)));
+      animation = new NasdaqAnimation(newAttr($(this)));
       animation.initialize();
     });
   };

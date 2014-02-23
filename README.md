@@ -1,6 +1,6 @@
 How to use jQuery NasdaqAnimation plugin
 ===============
-jQuery NasdaqAnimation is a lightweight plugin that wants to solve the problem when you have a very long text for a single line and you don't want to use another line, css ellipsis (...) or any other solution. Otherwise, you just like this text effect.
+jQuery NasdaqAnimation is a lightweight plugin that wants to solve the problem that arises when you have a very long text for a single line and you don't want to use another line, css ellipsis (...) or any other solution. Or, simply, you just like this text effect.
 
 It uses CSS3 transitions to do it.
 
@@ -14,11 +14,14 @@ For browser transition support see [http://www.w3schools.com/css/css3_transition
 
 Animation settings are:
 * **duration**  
-  text animation duration (By default, 50 seconds)
+  text animation duration  
+  default: 50 seconds
 * **loop**  
-  repeat text animation loop every X seconds (By default, 1second)
+  repeat text animation loop every X seconds  
+  default: 1second
 * **effect**  
-  css text transition effect (By default, ease)
+  css text transition effect  
+  default: ease
 
 Basic layout:
 
