@@ -1,11 +1,11 @@
 /**
- * @file jQuery lightweight text animation plugin
+ * @file jQuery lightweight ticker plugin
  * @author Aleix Fabra
  */
 (function ($) {
   "use strict";
 
-  var NasdaqAnimation = function (attributes) {
+  var jTicker = function (attributes) {
     var defaults = {
         offset: 3
       },
@@ -105,9 +105,9 @@
   };
 
   /**
-   * Create NasdaqAnimation input object
+   * Create jTicker input object
    * @param  {number} el - current jquery element
-   * @return {object} NasdaqAnimation input object
+   * @return {object} jTicker input object
    */
   function newAttr(el) {
     return {
@@ -123,10 +123,10 @@
    * Initialize jQuery plugin function
    * @return {object} jQuery plugin object
    */
-  $.fn.nasdaqAnimation = function () {
+  $.fn.jTicker = function () {
     var animation;
     return this.each(function () {
-      animation = new NasdaqAnimation(newAttr($(this)));
+      animation = new jTicker(newAttr($(this)));
       animation.initialize();
     });
   };

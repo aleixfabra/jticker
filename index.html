@@ -3,32 +3,36 @@
   <head>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-    <title>NasdaqAnimation - jQuery text animation plugin</title>
+    <title>jTicker - jQuery text animation plugin</title>
     <meta name="description" content="">
     <meta name="author" content="Aleix Fabra">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script type="text/javascript" src="jquery.nasdaqanimation.min.js"></script>
+    <script type="text/javascript" src="jquery.jticker.min.js"></script>
     <script type="text/javascript">
       jQuery(function($) {
-        $('.nasdaq-animation').nasdaqAnimation();
+        $('.ticker').jTicker();
       });
     </script>
     <style type="text/css">
-      .nasdaq-animation {
+      .ticker {
         width: 400px;
       }
     </style>
   </head>
   <body>
   <div>
-    <header></header>
+    <header>
+    <h1>jTicker plugin</h1>
+    </header>
     <!-- Default configuration -->
-    <div class="nasdaq-animation">
+    <h3>Default:</h3>
+    <div class="ticker">
       <span>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</span>
     </div>
     <!-- Custom configuration -->
-    <div class="nasdaq-animation" data-duration="20" data-loop="2" data-effect="linear">
+    <h3>Custom:</h3>
+    <div class="ticker" data-duration="20" data-loop="2" data-effect="linear">
       <span>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</span>
     </div>
     <footer></footer>

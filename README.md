@@ -1,6 +1,6 @@
-How to use jQuery NasdaqAnimation plugin
+How to use jQuery jTicker plugin
 ===============
-jQuery NasdaqAnimation is a lightweight plugin that wants to solve the problem that arises when you have a very long text for a single line and you don't want to use another line, css ellipsis (...) or any other solution. Or, simply, you just like this text effect.
+jQuery jTicker is a lightweight plugin that wants to solve the problem that arises when you have a very long text for a single line and you don't want to use another line, css ellipsis (...) or any other solution. Or, simply, you just like this text effect.
 
 It uses CSS3 transitions to do it.
 
@@ -8,25 +8,25 @@ For browser transition support see [http://www.w3schools.com/css/css3_transition
 
 ## Demo
 
-* [index.html](http://www.madebyaleix.com/projects/nasdaq-animation/)
+* [index.html](http://www.madebyaleix.com/projects/jticker/)
 
 ## Usage
 
 Animation settings are:
-* **duration**  
-  text animation duration  
+* **duration**
+  text animation duration
   default: 50 seconds
-* **loop**  
-  repeat text animation loop every X seconds  
+* **loop**
+  repeat text animation loop every X seconds
   default: 1second
-* **effect**  
-  css text transition effect  
+* **effect**
+  css text transition effect
   default: ease
 
 Basic layout:
 
 ```html
-<div class="nasdaq-animation">
+<div class="ticker">
   <span><!-- put your text content here --></span>
 </div>
 ```
@@ -34,7 +34,7 @@ Basic layout:
 Custom layout (recomended):
 
 ```html
-<div class="nasdaq-animation" data-duration="20" data-loop="2" data-effect="linear">
+<div class="ticker" data-duration="20" data-loop="2" data-effect="linear">
   <span><!-- put your text content here --></span>
 </div>
 ```
@@ -42,5 +42,5 @@ Custom layout (recomended):
 Basic javascript initialization:
 
 ```javascript
-$('.nasdaq-animation').nasdaqAnimation();
+$('.ticker').jTicker();
 ```
