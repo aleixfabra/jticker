@@ -1,6 +1,6 @@
 /**
  * @file jQuery lightweight ticker plugin
- * @author Aleix Fabra
+ * @author Aleix Fabra <aleixfabra@gmail.com>
  */
 (function ($) {
   "use strict";
@@ -13,7 +13,7 @@
 
     /**
      * Set CSS3 Cross-browser transition to element instance
-     * @param  {string} string - CSS3 transition string
+     * @param {string} string - CSS3 transition string
      */
     function setAnimation(string) {
       attr.el.css({
