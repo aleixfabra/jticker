@@ -4,7 +4,7 @@ jQuery jTicker is a lightweight plugin that wants to solve the problem that aris
 
 It uses CSS3 transitions to do it.
 
-For browser transition support see [http://www.w3schools.com/css/css3_transitions.asp](http://www.w3schools.com/css/css3_transitions.asp)
+For browser transition support see [http://caniuse.com/#feat=css-transitions](http://caniuse.com/#feat=css-transitions)
 
 ## Demo
 
