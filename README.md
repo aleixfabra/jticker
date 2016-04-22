@@ -1,10 +1,8 @@
-How to use jQuery jTicker plugin
+jTicker
 ===============
 jQuery jTicker is a lightweight plugin that wants to solve the problem that arises when you have a very long text for a single line and you don't want to use another line, css ellipsis (...) or any other solution. Or, simply, you just like this text effect.
 
-It uses CSS3 transitions to do it.
-
-For browser transition support see [http://caniuse.com/#feat=css-transitions](http://caniuse.com/#feat=css-transitions)
+It uses CSS3 transitions to do it. For browser transition support see [http://caniuse.com/#feat=css-transitions](http://caniuse.com/#feat=css-transitions)
 
 ## Demo
 
