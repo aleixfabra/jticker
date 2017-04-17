@@ -12,14 +12,11 @@ It uses CSS3 transitions to do it. For browser transition support see [http://ca
 
 Animation settings are:
 * **duration**
-  text animation duration
-  default: 50 seconds
+  text animation duration. default: 50 seconds
 * **loop**
-  repeat text animation loop every X seconds
-  default: 1second
+  repeat text animation loop every X seconds. default: 1second
 * **effect**
-  css text transition effect
-  default: ease
+  css text transition effect. default: ease
 
 Basic layout:
 
